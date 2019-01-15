@@ -1,0 +1,41 @@
+/*
+   New Perspectives on HTML and CSS, 7th Edition
+   Tutorial 7
+   Case Problem 1
+
+   ACGIP Registration Validation Style Sheet
+   Author: Trent Peterson    
+      Date:   1.14.19   
+
+   Filename: cg_validate.css
+
+*/
+
+
+/* Validation Styles */
+/* This sets the background color of all input, selects, adn text areas as long as the user is clicked on them */
+input:focus,
+select:focus,
+textarea:focus {
+    background-color: rgb(245, 245, 140);
+}
+
+/* This sets the color and a picture on the right side of all of the required fields as long as you are clicked on it and it is valid */
+input#fnBox:valid:focus,
+input#lnBox:valid:focus,
+input#addBox:valid:focus,
+input#mailBox:valid:focus,
+input#phoneBox:valid:focus,
+input#idBox:valid:focus {
+    background: rgb(220, 255, 220) url('cg_valid.png') right/contain no-repeat;
+}
+
+/* This sets the color and a picture on the right side of all of the required fields as long as you are clicked on it and it is invalid */
+input#fnBox:invalid:focus,
+input#lnBox:invalid:focus,
+input#addBox:invalid:focus,
+input#mailBox:invalid:focus,
+input#phoneBox:invalid:focus,
+input#idBox:invalid:focus {
+    background: rgb(255, 232, 232) url('cg_invalid.png') right/contain no-repeat;
+}
